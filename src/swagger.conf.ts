@@ -15,7 +15,7 @@ export const swaggerOptions={
         //llave que va a decir donde se encuentra los servidores donde se va a documentar los servidores de la API
         servers:[
             {
-                url:"http:localhost:3000",
+                url:"http://localhost:3000",
                 description:"Servidor local de documentacion de la API"
             }
         ]

@@ -1,3 +1,5 @@
+import SwaggerUi from "swagger-ui-express"
+import { swaggerSpec } from "./swagger.conf"
 import express,{Application, Request, Response} from 'express'
 
 
@@ -12,6 +14,11 @@ class App{
         this.app=express()
         //decirle a ese objeto que use caracteristicas de json
         this.app.use(express.json())
+        this.app.use(
+            "/api-docs",
+            SwaggerUi.serve,
+            SwaggerUi.setup(swaggerSpec)
+        )
         //utilice una funcion donde se va a definir la ruta
         this.routes()
     }
