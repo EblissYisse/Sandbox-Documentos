@@ -1,3 +1,6 @@
+import SwaggerUi from "swagger-ui-express"
+import { swaggerSpec } from "./swagger.conf"
+
 //Creamos un objeto de la clase app
 import App from "./Router"
 
